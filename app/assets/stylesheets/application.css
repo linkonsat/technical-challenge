@@ -13,6 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+.nav_container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  animation-duration: 2s;
+  animation-name: fadein;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
 td.centered-cell {
   text-align: center;
 }
