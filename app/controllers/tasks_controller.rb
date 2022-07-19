@@ -19,7 +19,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
 
     if @task.save
-      redirect_to edit_task_list_tasks_path(@task_list, @task), notice: "Task was successfully created."
+      redirect_to task_list_tasks_path(@task_list), notice: "Task was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
