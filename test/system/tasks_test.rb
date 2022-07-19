@@ -44,4 +44,11 @@ class TasksTest < ApplicationSystemTestCase
 
     assert_text "Task was successfully destroyed"
   end
+
+  test "Should be able to visit task list" do 
+    visit task_url(@task)
+    click_on "Task list"
+
+    assert_text "#{@task.task_list.name}"
+  end
 end

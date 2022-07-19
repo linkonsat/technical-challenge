@@ -38,4 +38,11 @@ class TaskListsTest < ApplicationSystemTestCase
 
     assert_text "Task list was successfully destroyed"
   end
+
+  test "Should visit all tasks from nav" do 
+    visit task_list_url(@task_list)
+    click_on "Task Lists Overview"
+
+    assert_text "#{@task_list.name}"
+  end
 end
