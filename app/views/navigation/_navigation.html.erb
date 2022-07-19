@@ -1,0 +1,10 @@
+<div class="nav_container">
+  <div>
+    <%= link_to "Task Lists Overview", "/" %>
+  </div>
+  <% if !@task_list.nil? %>
+    <div>
+      <%= link_to "Task list", "#{task_list_tasks_path(@task_list)}" %>
+    </div>
+  <% end %>
+</div>
