@@ -7,7 +7,6 @@ class TasksController < ApplicationController
   def index
     @tasks = @task_list.tasks
     respond_to do |format|
-      debugger
       format.html
       format.json { render :json => @task_list.to_json(:include => :tasks) }
     end
