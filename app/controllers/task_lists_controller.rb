@@ -3,6 +3,11 @@ class TaskListsController < ApplicationController
 
   def index
     @task_lists = TaskList.all
+    debugger
+    respond_to do |format|
+      format.html
+      format.json { render :json => @task_lists.to_json(:include => :tasks) }
+    end
   end
 
   def new
